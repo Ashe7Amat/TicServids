@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="../assets/logo1.png" alt="Logo" />
+      <form class="search" action="/search" method="get">
+        <input
+          type="text"
+          name="q"
+          id="search"
+          class="search-input"
+          placeholder="Search..."
+        />
+        <div class="search-icon">
+          <img class="lupa" alt="lupa" src="../assets/lupa.png" />
+        </div>
+      </form>
+      <a href="../pages/Login/login.html"><button class="login">Iniciar sesion</button></a>
+      <a href="../pages/Register/register.html"><button class="login">Registrarse</button></a>
+    </header>
+    <div class="opciones">
+      <a href="../pages/juegos/juegos.html"><button class="buttonMenu">Juegos</button></a>
+      <a href="../pages/videos/videos.html"><button class="buttonMenu">Videos</button></a>
+      <a href="../pages/radio/radio.html"><button class="buttonMenu">Radio</button></a>
+    </div>
+    <section class="slider">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="../assets/juegos.jpg" alt="Imagen 1" />
+          </div>
+          <div class="slide">
+            <img src="../assets/juegos.jpg" alt="Imagen 2" />
+          </div>
+          <div class="slide">
+            <img src="../assets/juegos.jpg" alt="Imagen 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="content">
+      <section class="featured-products">
+        <h2>Productos destacados</h2>
+        <ul>
+          <li>
+            <img src="../assets/img1.jpg" alt="Imagen 1" />
+            <h3>Producto 1</h3>
+            <p>Descripcion del producto 1</p>
+            <p class="price">$100</p>
+          </li>
+          <li>
+            <img src="../assets/img2.jpg" alt="Imagen 2" />
+            <h3>Producto 2</h3>
+            <p>Descripcion del producto 2</p>
+            <p class="price">$50</p>
+          </li>
+          <li>
+            <img src="../assets/img3.jpg" alt="Imagen 3" />
+            <h3>Producto 3</h3>
+            <p>Descripcion del producto 3</p>
+            <p class="price">$200</p>
+          </li>
+        </ul>
+      </section>
+      <section class="about-us">
+        <h2>Acerca de nosotros</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+          consequatur.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2020 - Todos los derechos reservados</p>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>
