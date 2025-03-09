@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <header class="header">
-      <img class="logo" src="../assets/logo1.png" alt="Logo" />
-      <form class="search" action="/search" method="get">
-        <input
-          type="text"
-          name="q"
-          id="search"
-          class="search-input"
-          placeholder="Search..."
-        />
-        <div class="search-icon">
-          <img class="lupa" alt="lupa" src="../assets/lupa.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="../assets/logo1.png" alt="Logo" />
+    <form class="search" action="/search" method="get">
+      <input type="text" name="q" id="search" class="search-input" placeholder="Search..." />
+      <div class="search-icon">
+        <img class="lupa" alt="lupa" src="../assets/lupa.png" />
+      </div>
+    </form>
+    <a href="../pages/Login/login.html"><button class="login">Iniciar sesion</button></a>
+    <a href="../pages/Register/register.html"><button class="login">Registrarse</button></a>
+  </header>
+  <div class="opciones">
+    <a href="../pages/juegos/juegos.html"><button class="buttonMenu">Juegos</button></a>
+    <a href="../pages/videos/videos.html"><button class="buttonMenu">Videos</button></a>
+    <a href="../pages/radio/radio.html"><button class="buttonMenu">Radio</button></a>
+  </div>
+  <section class="slider">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="../assets/juegos.jpg" alt="Imagen 1" />
         </div>
-      </form>
-      <a href="../pages/Login/login.html"><button class="login">Iniciar sesion</button></a>
-      <a href="../pages/Register/register.html"><button class="login">Registrarse</button></a>
-    </header>
-    <div class="opciones">
-      <a href="../pages/juegos/juegos.html"><button class="buttonMenu">Juegos</button></a>
-      <a href="../pages/videos/videos.html"><button class="buttonMenu">Videos</button></a>
-      <a href="../pages/radio/radio.html"><button class="buttonMenu">Radio</button></a>
-    </div>
-    <section class="slider">
-      <div class="slider">
-        <div class="slides">
-          <div class="slide">
-            <img src="../assets/juegos.jpg" alt="Imagen 1" />
-          </div>
-          <div class="slide">
-            <img src="../assets/juegos.jpg" alt="Imagen 2" />
-          </div>
-          <div class="slide">
-            <img src="../assets/juegos.jpg" alt="Imagen 3" />
-          </div>
+        <div class="slide">
+          <img src="../assets/juegos.jpg" alt="Imagen 2" />
+        </div>
+        <div class="slide">
+          <img src="../assets/juegos.jpg" alt="Imagen 3" />
         </div>
       </div>
+    </div>
+  </section>
+  <main class="content">
+    <section class="featured-products">
+      <h2>Productos destacados</h2>
+      <ul>
+        <li>
+          <img src="../assets/productos/TIC-GAMEBOX.jpg" alt="Imagen 1" />
+          <h3>TIC GameBox – Colección de Minijuegos</h3>
+          <p>Sumérgete en el mundo del entretenimiento con TIC GameBox, una selección de minijuegos casuales diseñados
+            para todas las edades. Disfruta de partidas rápidas de estrategia, arcade y rompecabezas sin necesidad de
+            largas sesiones.
+          </p>
+          <p class="price">$100</p>
+        </li>
+        <li>
+          <img src="../assets/productos/TIC-PLAY.jpg" alt="Imagen 2" />
+          <h3>TIC Play – Plataforma de Streaming</h3>
+          <p>Disfruta de una amplia variedad de videos, cortometrajes y contenido exclusivo con TIC Play. Desde
+            películas independientes hasta virales del momento, accede a un catálogo en constante actualización para
+            disfrutar del mejor entretenimiento sin interrupciones.</p>
+          <p class="price">$50</p>
+        </li>
+        <li>
+          <img src="../assets/productos/TIC-RADIO.jpg" alt="Imagen 3" />
+          <h3>TIC Radio – Podcast & Música en Vivo</h3>
+          <p>Conéctate a TIC Radio, la mejor plataforma para disfrutar de música en streaming y podcasts originales.
+            Desde programas de tecnología y cultura hasta listas de reproducción personalizadas, TIC Radio es tu mejor
+            compañero para cualquier momento del día.</p>
+          <p class="price">$200</p>
+        </li>
+      </ul>
     </section>
-    <main class="content">
-      <section class="featured-products">
-        <h2>Productos destacados</h2>
-        <ul>
-          <li>
-            <img src="../assets/img1.jpg" alt="Imagen 1" />
-            <h3>Producto 1</h3>
-            <p>Descripcion del producto 1</p>
-            <p class="price">$100</p>
-          </li>
-          <li>
-            <img src="../assets/img2.jpg" alt="Imagen 2" />
-            <h3>Producto 2</h3>
-            <p>Descripcion del producto 2</p>
-            <p class="price">$50</p>
-          </li>
-          <li>
-            <img src="../assets/img3.jpg" alt="Imagen 3" />
-            <h3>Producto 3</h3>
-            <p>Descripcion del producto 3</p>
-            <p class="price">$200</p>
-          </li>
-        </ul>
-      </section>
-      <section class="about-us">
-        <h2>Acerca de nosotros</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-          consequatur.
-        </p>
-      </section>
-    </main>
-    <footer class="footer">
-      <p>&copy; 2020 - Todos los derechos reservados</p>
-    </footer>
-  </body>
-  <script src="./script.js"></script>
+    <section class="about-us">
+      <h2>Acerca de nosotros</h2>
+      <p>En <strong>TIC Servid</strong>, nos apasiona el entretenimiento digital y queremos ofrecerte una experiencia
+        única y accesible. Somos una plataforma innovadora dedicada al ocio interactivo, donde encontrarás una gran
+        variedad de contenido, desde <strong>juegos </strong> y <strong>streaming de videos</strong>, hasta
+        <strong>podcasts</strong> y <strong>radio</strong>.
+      </p>
+      <p>Nuestro objetivo es proporcionar un espacio donde puedas <strong>disfrutar del entretenimiento sin
+          complicaciones</strong>, sin necesidad de invertir demasiado tiempo. Ya seas un amante de los videojuegos, un
+        aficionado a los podcasts o alguien que busca música y videos para relajarse, en <strong>TIC Servid</strong>
+        tenemos algo para ti.</p>
+      <p>Dirigimos nuestra propuesta a un público amplio, especialmente a <strong>jóvenes y adultos de 18 a 45
+          años</strong>, con un enfoque especial en los mercados de habla hispana. Creemos en la importancia de un
+        entretenimiento <strong>ligero, accesible y de calidad</strong>, adaptado a las necesidades de quienes buscan
+        momentos de desconexión en su día a día.</p>
+      <p>A medida que crecemos, exploramos nuevas formas de enriquecer nuestra plataforma, incluyendo contenido gratuito
+        y opciones premium. Queremos que <strong>TIC Servid</strong> sea tu destino favorito para el ocio digital,
+        combinando la diversión con la comodidad de una plataforma fácil de usar.</p>
+      <p><strong>¡Únete a nuestra comunidad y descubre todo lo que tenemos para ofrecerte!</strong></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 - Todos los derechos reservados</p>
+  </footer>
+</body>
+<script src="./script.js"></script>
+
 </html>
