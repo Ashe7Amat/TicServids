@@ -3,31 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
     <div class="container">
-        
         <main class="content">
             <img class="logo" src="../../assets/logo1.png" alt="Logo" />
             <h1>TicServid</h1>
             <h2>Register</h2>
-        </br>
-            <form action="/login" method="post">
-               
-                <input type="email" id="email" name="email" required placeholder="Email" />
+            <form id="registerForm" action="/" method="post" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email" />
+                    <span class="error-message" id="emailError"></span>
+                </div>
                 
-                <input type="text" id="username" name="username" required placeholder="Username" />
+                <div class="form-group">
+                    <input type="text" id="username" name="username" required placeholder="Username" minlength="3" />
+                    <span class="error-message" id="usernameError"></span>
+                </div>
                 
-                <input type="password" id="password" name="password" required placeholder="password" />
-                <button type="submit" class="login">Login</button>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" required placeholder="Password" minlength="8" />
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password" />
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+                
+                <button type="submit" class="register">Register</button>
             </form>
         </main>
         <aside class="sidebar">
-            <h3>Sidebar</h3>
-            <p>Additional content or links can go here.</p>
+            
         </aside>
     </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            // Reset previous error styles and messages
+            document.querySelectorAll('input').forEach(input => {
+                input.style.borderColor = '';
+            });
+            const oldErrors = document.querySelectorAll('.error-message-text');
+            oldErrors.forEach(error => error.remove());
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                showError(email, 'Invalid email format');
+                isValid = false;
+            }
+
+            // Username validation
+            const username = document.getElementById('username');
+            if (username.value.length < 3) {
+                showError(username, 'Username must be at least 3 characters long');
+                isValid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            
+            if (password.value.length < 6) {
+                showError(password, 'Password must be at least 6 characters long');
+                isValid = false;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                showError(confirmPassword, 'Passwords do not match');
+                isValid = false;
+            }
+
+            if (isValid) {
+                window.location.href = '../../index/index.html';
+            }
+
+            return false;
+        }
+
+        function showError(input, message) {
+            input.style.borderColor = 'red';
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = message;
+            errorMessage.style.color = 'red';
+            errorMessage.style.marginTop = '5px';
+            errorMessage.className = 'error-message-text';
+            input.parentNode.appendChild(errorMessage);
+        }
+    </script>
+    
 </body>
 </html>
