@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Radio Online</title>
     <link rel="stylesheet" href="../../index/css.css">
     <link rel="stylesheet" href="radio.css">
 </head>
 <body>
     <header-component></header-component>
     
+    <main>
+        <section class="radio-player">
+            <h1>Escucha Nuestra Radio en Vivo</h1>
+            <audio controls>
+                <source src="https://stream.live.vc.bbcmedia.co.uk/bbc_world_service" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <section class="schedule">
+            <h2>Programación</h2>
+            <ul>
+                <li><strong>08:00 AM - 10:00 AM</strong> - Noticias Matutinas</li>
+                <li><strong>10:00 AM - 12:00 PM</strong> - Música Pop</li>
+                <li><strong>12:00 PM - 02:00 PM</strong> - Entrevistas en Vivo</li>
+                <li><strong>02:00 PM - 04:00 PM</strong> - Rock Clásico</li>
+                <li><strong>04:00 PM - 06:00 PM</strong> - Peticiones del Público</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 </body>
 <script src="../../index/headerComponent.js"></script>
 </html>
